@@ -2,3 +2,5 @@
   = flash[:alert]
 %h3 New comment
 = render 'form'
+.alert.alert-success{style: "margin-top: 2%"}
+  = render @car.state if @car.state
