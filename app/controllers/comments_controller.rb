@@ -4,6 +4,10 @@ class CommentsController < ApplicationController
     @comments = Comment.all
   end
 
+  def new
+    @comment = Comment.new
+  end
+
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
