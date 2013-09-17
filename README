@@ -1,0 +1,23 @@
+The Rules:
+
+You have to create an app that implements the 3 of the chapters you got in the raffle.
+
+You have to create a branch starting from the commit of the repo that says 'START' and you will have to use that branch as your integration branch (that means all branches you create from that branch will be merged back to it).The name of your integration branch should be with next format <first_name>_<last_name>, that means that if your name is 'Pedro Picapiedra' your integration branch's name should be pedro_picapiedra.
+
+You can use all gems you saw during this week
+
+What you can't do:
+* Use scaffolding
+
+What we are going to evaluate:
+- Features are working
+- Test coverage
+Plust
+- quality of code
+- test coverage of code
+- git structure
+- commits description
+
+You should use Postgresql as database engine.
+
+You have from 4pm to 7:30pm to finish this app unless another instruction is given to you. Good luck.
