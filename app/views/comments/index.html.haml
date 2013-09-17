@@ -2,7 +2,8 @@
   = flash[:notice]
 
 - @comments.each do |comment|
-  .well comment.text
+  .well
+    #{comment.text}
 %p
   = link_to "New Comment", new_comment_path, class: "btn btn-default"
   = link_to "Back", root_url, class: "btn btn-danger pull-right"
