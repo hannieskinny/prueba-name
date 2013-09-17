@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'pg'
+
+gem 'haml'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -32,14 +36,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :assets do
+  gem 'sass-rails', '~> 4.0.0'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :test, :development do
+  gem 'rspec-rails', "~> 2.14.0"
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :test do
+  gem 'capybara', "~> 2.1.0"
+end
