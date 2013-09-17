@@ -4,9 +4,10 @@ class Comment < ActiveRecord::Base
   after_create :set_comment_state
 
 
-  def set_comment_state
-    self.comment.state = self.state
-    self.comment.save!
-  end
+  private
+    def set_comment_state
+      self.comment.state = self.state
+      self.comment.save!
+    end
 
 end
