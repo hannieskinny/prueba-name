@@ -12,10 +12,10 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     if @comment.save
       flash[:notice] = "Comment has been created."
-      redirect_to [@car]
+      redirect_to comments_path
     else
       flash[:alert] = "Comment has not been created."
-      render :template => "cars/show"
+      rendirect_to new_comment_path
     end
   end
 
