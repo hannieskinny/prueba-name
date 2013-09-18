@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
+      Notifier.send_email_to.deliver
       flash[:notice] = "Comment has been created."
       redirect_to comments_path
     else
