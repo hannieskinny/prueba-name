@@ -1,0 +1,1131 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:03:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (26.5ms)
+Completed 200 OK in 142ms (Views: 105.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:03:48 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:03:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:03:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:03:48 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:03:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:03:48 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:14:15 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:14:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:14:15 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:14:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:14:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:14:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:14:15 -0500
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2013-09-17 19:14:17 -0500
+Processing by CommentsController#new as HTML
+  [1m[35mState Load (1.0ms)[0m  SELECT "states".* FROM "states"
+  Rendered comments/_form.html.haml (41.1ms)
+  Rendered comments/new.html.haml within layouts/application (73.5ms)
+Completed 200 OK in 82ms (Views: 78.0ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-17 19:14:29 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"nuevo", "state_id"=>"1"}, "commit"=>"Create comment"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 18 Sep 2013 00:14:29 UTC +00:00], ["state_id", 1], ["text", "nuevo"], ["updated_at", Wed, 18 Sep 2013 00:14:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered notifier/send_email_to.text.haml (1.2ms)
+
+Sent mail to hannieskinny@gmail.com (13.0ms)
+Date: Tue, 17 Sep 2013 19:14:30 -0500
+from: Car App <>
+To: hannieskinny@gmail.com
+Message-ID: <5238f0665d498_1ba93feff93e7bb87663a@TangoSources-Mac-mini.local.mail>
+Subject: Welcome Fulanito!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello
+Your comment has been created
+
+Redirected to http://localhost:3000/comments
+Completed 302 Found in 1037ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-17 19:14:30 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:14:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:14:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:14:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:14:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:14:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:14:30 -0500
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2013-09-17 19:19:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#new as HTML
+  [1m[35mState Load (0.4ms)[0m  SELECT "states".* FROM "states"
+  Rendered comments/_form.html.haml (50.3ms)
+  Rendered comments/new.html.haml within layouts/application (62.2ms)
+Completed 200 OK in 192ms (Views: 149.1ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-17 19:19:35 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"hannie", "state_id"=>"1"}, "commit"=>"Create comment"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.6ms)[0m  INSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 18 Sep 2013 00:19:35 UTC +00:00], ["state_id", 1], ["text", "hannie"], ["updated_at", Wed, 18 Sep 2013 00:19:35 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered notifier/send_email_to.text.haml (1.1ms)
+
+Sent mail to hannieskinny@gmail.com (4573.9ms)
+Date: Tue, 17 Sep 2013 19:19:35 -0500
+From: Comment App <alejandra.gutierrez@tangosource.com>
+To: hannieskinny@gmail.com
+Message-ID: <5238f197a2360_1c4d3feacdece2b038a7@TangoSources-Mac-mini.local.mail>
+Subject: Welcome Fulanito!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello
+Your comment has been created
+
+Redirected to http://localhost:3000/comments
+Completed 302 Found in 4638ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-17 19:19:40 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:19:40 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:19:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:19:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:19:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:19:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:19:40 -0500
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-17 19:27:05 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (21.7ms)
+Completed 200 OK in 35ms (Views: 25.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:27:05 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:27:05 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:27:05 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:27:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:27:05 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:27:05 -0500
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-17 19:27:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (26.7ms)
+Completed 200 OK in 155ms (Views: 118.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:27:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:27:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:27:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:27:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:27:49 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:27:49 -0500
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-17 19:34:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (26.8ms)
+Completed 200 OK in 155ms (Views: 117.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:34:09 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:34:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:34:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:34:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:34:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:34:09 -0500
+
+
+Started GET "/api/v1/cars" for 127.0.0.1 at 2013-09-17 19:34:14 -0500
+
+ActionController::RoutingError (No route matches [GET] "/api/v1/cars"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.0ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (63.8ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:34:21 -0500
+
+SyntaxError (/Users/hannie/trainees_6th_evaluation/app/controllers/api/v1/base_controller.rb:4: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/api/v1/comments_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.5ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:35:16 -0500
+
+SyntaxError (/Users/hannie/trainees_6th_evaluation/app/controllers/api/v1/base_controller.rb:4: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/api/v1/comments_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.8ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:35:27 -0500
+
+SyntaxError (/Users/hannie/trainees_6th_evaluation/app/controllers/api/v1/base_controller.rb:4: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/api/v1/comments_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.1ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:36:11 -0500
+
+SyntaxError (/Users/hannie/trainees_6th_evaluation/app/controllers/api/v1/base_controller.rb:4: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/api/v1/comments_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.2ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:36:29 -0500
+Processing by Api::V1::CommentsController#index as JSON
+Filter chain halted as :find_comment rendered or redirected
+Completed 404 Not Found in 8ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:38:37 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (19.8ms)
+Completed 200 OK in 32ms (Views: 24.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:38:37 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:38:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:38:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:38:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:38:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:38:37 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:38:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (25.4ms)
+Completed 200 OK in 153ms (Views: 115.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:38:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:38:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:38:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:38:55 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:38:55 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:38:55 -0500
+
+
+Started GET "/api/v1/cars" for 127.0.0.1 at 2013-09-17 19:39:57 -0500
+
+ActionController::RoutingError (No route matches [GET] "/api/v1/cars"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.1ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:40:03 -0500
+Processing by Api::V1::CommentsController#index as JSON
+Filter chain halted as :find_comment rendered or redirected
+Completed 404 Not Found in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/comments.json" for 127.0.0.1 at 2013-09-17 19:40:07 -0500
+Processing by Api::V1::CommentsController#index as JSON
+Filter chain halted as :find_comment rendered or redirected
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:40:15 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:40:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:40:15 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:40:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:40:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:40:15 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:40:15 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:40:15 -0500
+
+
+Started GET "/api/v1/cars" for 127.0.0.1 at 2013-09-17 19:45:39 -0500
+
+ActionController::RoutingError (No route matches [GET] "/api/v1/cars"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (82.0ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:45:44 -0500
+Processing by Api::V1::CommentsController#index as JSON
+Filter chain halted as :find_comment rendered or redirected
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/comment" for 127.0.0.1 at 2013-09-17 19:45:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/api/v1/comment"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.3ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:45:49 -0500
+Processing by Api::V1::CommentsController#index as JSON
+Filter chain halted as :find_comment rendered or redirected
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:46:01 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:46:01 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:46:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:46:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:46:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:46:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:46:01 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:48:38 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 34ms (Views: 26.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:48:39 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:48:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:48:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:48:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:48:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:48:39 -0500
+
+
+Started GET "/api/v1/cars" for 127.0.0.1 at 2013-09-17 19:48:42 -0500
+
+ActionController::RoutingError (No route matches [GET] "/api/v1/cars"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/hannie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.4ms)
+
+
+Started GET "/api/v1/comments" for 127.0.0.1 at 2013-09-17 19:48:47 -0500
+Processing by Api::V1::CommentsController#index as JSON
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 17ms (Views: 12.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 19:49:03 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-18 10:59:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (9.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (14.0ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (92.9ms)
+Completed 200 OK in 374ms (Views: 292.2ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-18 10:59:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-18 10:59:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-18 10:59:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-18 10:59:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-18 10:59:34 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-18 10:59:34 -0500
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2013-09-18 10:59:39 -0500
+Processing by CommentsController#new as HTML
+  [1m[36mState Load (15.3ms)[0m  [1mSELECT "states".* FROM "states"[0m
+  Rendered comments/_form.html.haml (90.7ms)
+  Rendered comments/new.html.haml within layouts/application (116.6ms)
+Completed 200 OK in 135ms (Views: 116.3ms | ActiveRecord: 17.3ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 10:59:51 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"sssssssssss", "state_id"=>"3"}, "commit"=>"Create comment"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (79.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 18 Sep 2013 15:59:51 UTC +00:00], ["state_id", 3], ["text", "sssssssssss"], ["updated_at", Wed, 18 Sep 2013 15:59:51 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 109ms
+
+NoMethodError (undefined method `comment' for #<Comment:0x007f9be4382930>):
+  app/models/comment.rb:9:in `set_comment_state'
+  app/controllers/comments_controller.rb:13:in `create'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 11:00:40 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"sssssssssss", "state_id"=>"3"}, "commit"=>"Create comment"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 18 Sep 2013 16:00:40 UTC +00:00], ["state_id", 3], ["text", "sssssssssss"], ["updated_at", Wed, 18 Sep 2013 16:00:40 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 32ms
+
+NoMethodError (undefined method `comment' for #<Comment:0x007f9be75917a0>):
+  app/models/comment.rb:9:in `set_comment_state'
+  app/controllers/comments_controller.rb:13:in `create'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.7ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 11:03:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"sssssssssss", "state_id"=>"3"}, "commit"=>"Create comment"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 18 Sep 2013 16:03:00 UTC +00:00], ["state_id", 3], ["text", "sssssssssss"], ["updated_at", Wed, 18 Sep 2013 16:03:00 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 114ms
+
+NoMethodError (undefined method `comment' for #<Comment:0x007fc41cab9fb8>):
+  app/models/comment.rb:9:in `set_comment_state'
+  app/controllers/comments_controller.rb:13:in `create'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 11:03:34 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"sssssssssss", "state_id"=>"3"}, "commit"=>"Create comment"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 18 Sep 2013 16:03:34 UTC +00:00], ["state_id", 3], ["text", "sssssssssss"], ["updated_at", Wed, 18 Sep 2013 16:03:34 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 35ms
+
+NoMethodError (undefined method `comment' for #<Comment:0x007fc41cadb7a8>):
+  app/models/comment.rb:9:in `set_comment_state'
+  app/controllers/comments_controller.rb:13:in `create'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.8ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-18 11:03:38 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 100ms (Views: 98.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-18 11:03:38 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-18 11:03:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-18 11:03:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-18 11:03:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-18 11:03:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-18 11:03:38 -0500
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2013-09-18 11:03:41 -0500
+Processing by CommentsController#new as HTML
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT "states".* FROM "states"[0m
+  Rendered comments/_form.html.haml (32.8ms)
+  Rendered comments/new.html.haml within layouts/application (44.2ms)
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 11:03:46 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"holaaaaaaaaaaa", "state_id"=>"1"}, "commit"=>"Create comment"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 18 Sep 2013 16:03:46 UTC +00:00], ["state_id", 1], ["text", "holaaaaaaaaaaa"], ["updated_at", Wed, 18 Sep 2013 16:03:46 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `comment' for #<Comment:0x007fc41ca41b58>):
+  app/models/comment.rb:9:in `set_comment_state'
+  app/controllers/comments_controller.rb:13:in `create'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.5ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-18 11:03:56 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-18 11:03:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-18 11:03:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-18 11:03:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-18 11:03:56 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-18 11:03:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-18 11:03:56 -0500
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-18 11:04:00 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-18 11:04:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-18 11:04:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-18 11:04:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-18 11:04:00 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-18 11:04:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-18 11:04:00 -0500
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-18 11:05:07 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (23.8ms)
+Completed 200 OK in 38ms (Views: 28.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-18 11:05:07 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-18 11:05:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-18 11:05:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-18 11:05:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-18 11:05:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-18 11:05:07 -0500
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2013-09-18 11:05:08 -0500
+Processing by CommentsController#new as HTML
+  [1m[35mState Load (0.2ms)[0m  SELECT "states".* FROM "states"
+  Rendered comments/_form.html.haml (20.8ms)
+  Rendered comments/new.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 11:05:11 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"ssssssssssssss", "state_id"=>"1"}, "commit"=>"Create comment"}
+  [1m[36m (1.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 18 Sep 2013 16:05:11 UTC +00:00], ["state_id", 1], ["text", "ssssssssssssss"], ["updated_at", Wed, 18 Sep 2013 16:05:11 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered notifier/send_email_to.text.haml (1.2ms)
+
+Sent mail to hannieskinny@gmail.com (9.9ms)
+Date: Wed, 18 Sep 2013 11:05:11 -0500
+From: Comment App <>
+To: hannieskinny@gmail.com
+Message-ID: <5239cf379a18a_27a3fe20e525460294cc@TangoSources-Mac-mini.local.mail>
+Subject: Welcome Fulanito!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello
+Your comment has been created
+
+Completed 500 Internal Server Error in 92ms
+
+ArgumentError (An SMTP From address is required to send a message. Set the message smtp_envelope_from, return_path, sender, or from address.):
+  app/controllers/comments_controller.rb:14:in `create'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.4ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 11:05:53 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"ssssssssssssss", "state_id"=>"1"}, "commit"=>"Create comment"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 18 Sep 2013 16:05:53 UTC +00:00], ["state_id", 1], ["text", "ssssssssssssss"], ["updated_at", Wed, 18 Sep 2013 16:05:53 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT "states".* FROM "states"[0m
+Completed 500 Internal Server Error in 87893ms
+
+SystemExit (exit):
+  app/controllers/comments_controller.rb:14:in `create'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.3ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 11:09:53 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"ssssssssssssss", "state_id"=>"1"}, "commit"=>"Create comment"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 18 Sep 2013 16:09:53 UTC +00:00], ["state_id", 1], ["text", "ssssssssssssss"], ["updated_at", Wed, 18 Sep 2013 16:09:53 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/comments
+Completed 302 Found in 34ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-18 11:09:53 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.haml within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: - @comments.each do |comment|
+    5:   .well
+    6:     #{comment.text}
+    7:     #{comment.state.name}
+    8: %p
+    9:   = link_to "New Comment", new_comment_path, class: "btn btn-default"
+   10:   = link_to "Back", root_url, class: "btn btn-danger pull-right"
+  app/views/comments/index.html.haml:7:in `block in _app_views_comments_index_html_haml___1593141943305290744_70240136157580'
+  app/views/comments/index.html.haml:4:in `_app_views_comments_index_html_haml___1593141943305290744_70240136157580'
+
+
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/hannie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-18 11:11:26 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments"
+  [1m[36mState Load (16.8ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mState Load (0.5ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comments/index.html.haml within layouts/application (80.7ms)
+Completed 200 OK in 89ms (Views: 68.2ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-18 11:11:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-18 11:11:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-18 11:11:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-18 11:11:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-18 11:11:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-18 11:11:26 -0500
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2013-09-18 11:11:49 -0500
+Processing by CommentsController#new as HTML
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT "states".* FROM "states"[0m
+  Rendered comments/_form.html.haml (5.6ms)
+  Rendered comments/new.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-18 11:13:33 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments"
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mState Load (0.4ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comments/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-18 11:13:33 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-18 11:13:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-18 11:13:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-18 11:13:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-18 11:13:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-18 11:13:33 -0500
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2013-09-18 11:13:39 -0500
+Processing by CommentsController#new as HTML
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT "states".* FROM "states"[0m
+  Rendered comments/_form.html.haml (6.9ms)
+  Rendered comments/new.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2013-09-18 11:13:42 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/snDZzlM6DPTYw9UZ9V+q3tYtY0d5arDCt20UVvX90o=", "comment"=>{"text"=>"gfdgdfgdg", "state_id"=>"3"}, "commit"=>"Create comment"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "state_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 18 Sep 2013 16:13:42 UTC +00:00], ["state_id", 3], ["text", "gfdgdfgdg"], ["updated_at", Wed, 18 Sep 2013 16:13:42 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/comments
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2013-09-18 11:13:42 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  [1m[35mState Load (0.5ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mState Load (0.3ms)[0m  SELECT "states".* FROM "states" WHERE "states"."id" = $1 ORDER BY "states"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered comments/index.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-18 11:13:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-18 11:13:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-18 11:13:43 -0500
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-18 11:13:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-18 11:13:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-18 11:13:43 -0500

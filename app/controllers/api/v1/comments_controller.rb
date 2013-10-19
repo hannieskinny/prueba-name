@@ -1,5 +1,5 @@
 class Api::V1::CommentsController < Api::V1::BaseController
-  before_filter :find_comment
+  before_filter :find_comment, :only => [:show]
 
   def index
     respond_with(Comment.all)
@@ -13,6 +13,12 @@ class Api::V1::CommentsController < Api::V1::BaseController
       respond_with(comment)
     end
   end
+
+  def show
+    comment = Comment.find(params[:id])
+    respond_with(comment, :methods => "last_comment")
+  end
+
 
   private
     def find_comment
